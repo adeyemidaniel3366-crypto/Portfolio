@@ -1,0 +1,78 @@
+export const content = {
+  identity: {
+    name: 'Adeyemi Daniel Oluwasegun',
+    role: 'Software Developer',
+    location: 'Ondo Town, Ondo State, Nigeria',
+    basedIn: 'Ondo, Nigeria',
+    institution: 'Afe Babalola University (ABUAD), Ado-Ekiti, Nigeria',
+    email: '',
+  },
+  hero: {
+    headline: ['Software', 'Developer'],
+    subtext: 'Undergraduate Computer Science student building clean, performance-driven apps with polished, glassmorphic interfaces.',
+    availability: 'Available for remote & on-site',
+  },
+  about: {
+    heading: "I build fast, clean software with a designer's eye.",
+    paragraph: 'Computer Science undergraduate at ABUAD who ships mobile and web products. Design philosophy: clean architecture, performance-driven engineering, and polished visual aesthetics, specializing in glassmorphism, translucency, and Material 3 design. Available for remote and on-site opportunities.',
+    signature: 'Adeyemi Daniel Oluwasegun',
+    caption: 'Software Developer',
+    stats: [
+      { value: 6, label: 'Projects built' },
+      { value: 3, label: 'Platforms', note: 'Mobile · Web · Full-stack' },
+      { value: 4, label: 'Core stacks', note: 'Flutter · PHP/MySQL · Firebase · JavaScript' },
+    ],
+  },
+  services: [
+    { number: '01', title: 'Mobile development', description: 'Flutter and Dart apps with Material 3, sensors, camera, and offline-first architecture.' },
+    { number: '02', title: 'Frontend web', description: 'Responsive, modern JavaScript interfaces with thoughtful glassmorphism styling.' },
+    { number: '03', title: 'Backend & APIs', description: 'PHP, MySQL, Firebase, and reliable REST API integrations.' },
+    { number: '04', title: 'Payments & integrations', description: 'Payment gateway integration with Monnify and role-based authentication.' },
+    { number: '05', title: 'UI engineering', description: 'Component architecture and complex interface state management.' },
+  ],
+  skills: [
+    // Requested display levels; revise these when the self-assessment changes.
+    { name: 'Flutter / Dart', level: 100 },
+    { name: 'Frontend Web', level: 100 },
+    { name: 'PHP / MySQL', level: 100 },
+    { name: 'Firebase', level: 100 },
+    { name: 'Git / GitHub', level: 100 },
+    { name: 'Data Structures & Algorithms', level: 70 },
+  ],
+  skillGroups: [
+    { title: 'Mobile', items: ['Flutter', 'Dart', 'Material 3', 'Sensor APIs (motion / accelerometer)', 'Camera integration', 'Offline-first architecture'] },
+    { title: 'Frontend', items: ['HTML5', 'CSS3', 'Modern JavaScript (ES6+)', 'Glassmorphism / UI styling', 'Responsive design'] },
+    { title: 'Backend & databases', items: ['PHP', 'MySQL', 'Firebase', 'REST APIs', 'Payment gateway integration (Monnify)'] },
+    { title: 'Tools', items: ['VS Code', 'Android Studio', 'Gradle', 'PowerShell', 'WSL 2 / Ubuntu', 'Git / GitHub'] },
+    { title: 'Academic foundations', items: ['Data Structures & Algorithms', 'Computational Complexity', 'Vector Spaces', 'Calculus', 'Object-Oriented Programming'] },
+  ],
+  projects: [
+    { id: 'note-app', title: 'Note App', category: 'Mobile', type: 'Mobile note-taking app', stack: 'Flutter / Dart', description: 'A dark, touch-friendly note editor with tagged documents, quick formatting controls, autosave status, and a compact mobile navigation bar.', focus: ['Rich-text editing', 'Tag and document controls', 'Autosave experience'], theme: 'dark', mark: 'NOTES', image: '/projects/note-app.png', imageFit: 'contain', githubUrl: '', liveUrl: '' },
+    { id: 'anti-theft', title: 'Mobile Anti-Theft Guard', category: 'Mobile', type: 'Mobile security utility', stack: 'Flutter', description: 'A device security app with motion sensitivity, arming delay, selectable alarm sounds, evidence capture, vibration, flash alerts, and quick-settings widgets.', focus: ['Motion alarm controls', 'Security alert settings', 'Android quick-settings widgets'], theme: 'red', mark: 'GUARD', image: '/projects/mobile-anti-theft-guard.png', imageFit: 'contain', githubUrl: '', liveUrl: '' },
+    { id: 'vscode-replica', title: 'Web-Based VS Code Replica', category: 'Web', type: 'Frontend web application', stack: 'JavaScript / CSS', description: 'An in-browser recreation of the Visual Studio Code interface with activity bars, collapsible explorer panels, dynamic file management, and a mock interactive terminal.', focus: ['Complex UI state', 'Component architecture', 'Vanilla web technologies'], theme: 'paper', mark: 'CODE', image: '/projects/vscode-replica.png', imageFit: 'contain', imageScale: 0.72, githubUrl: '', liveUrl: '' },
+    { id: 'inventory-master', title: 'Inventory Master', category: 'Mobile', type: 'Mobile inventory management app', stack: 'Flutter / Dart', description: 'A stock and sales management app with product search, low-stock alerts, stock-in workflows, point-of-sale tools, and business reports.', focus: ['Inventory tracking', 'Low-stock alerts', 'Point-of-sale workflows'], theme: 'dark', mark: 'IM', image: '/projects/inventory-master.png', imageFit: 'contain', githubUrl: '', liveUrl: '' },
+    { id: 'converter', title: 'Document & File Converter App', category: 'Mobile', type: 'Mobile utility', stack: 'Flutter', description: 'A document utility combining local file processing with device camera capture to streamline image scanning and file format conversions.', focus: ['Media handling', 'Camera permissions', 'File system APIs'], theme: 'paper', mark: 'FILE', image: '/projects/document-converter.png', imageFit: 'contain', githubUrl: '', liveUrl: '' },
+    { id: 'material-fx', title: 'Material Fx', category: 'Mobile', type: 'Markets & screener app', stack: 'Mobile app', description: 'A market screener for browsing stocks, crypto, and forex, with searchable listings and visible price and percentage changes.', focus: ['Market category filters', 'Searchable listings', 'Price movement indicators'], theme: 'dark', mark: 'MFX', image: '/projects/material-fx.png', imageFit: 'contain', githubUrl: '', liveUrl: '' },
+  ],
+  stack: ['Flutter', 'Dart', 'JavaScript', 'PHP', 'MySQL', 'Firebase', 'Git', 'GitHub', 'VS Code', 'Android Studio', 'Linux / WSL'],
+  foundations: ['Data Structures & Algorithms', 'Computational Complexity', 'Vector Spaces & Calculus', 'Object-Oriented Programming'],
+  principles: [
+    { number: '01', title: 'Clean architecture', description: 'Separation of concerns, readable code, and maintainable structure from day one.' },
+    { number: '02', title: 'Performance-driven', description: 'Offline-first thinking, efficient state management, and fast load times.' },
+    { number: '03', title: 'Polished aesthetics', description: 'Glassmorphism, translucency, and Material 3 details that make interfaces feel finished.' },
+  ],
+  social: [
+    { name: 'GitHub', url: 'https://github.com/adeyemidaniel3366-crypto' },
+    { name: 'LinkedIn', url: 'https://linkedin.com/in/daniel-adeyemi-bab351392' },
+    { name: 'X', url: 'https://x.com/Adeyemi50996109' },
+  ],
+  nav: [
+    { label: 'Home', id: 'home' },
+    { label: 'About', id: 'about' },
+    { label: 'Services', id: 'services' },
+    { label: 'Skills', id: 'skills' },
+    { label: 'Work', id: 'work' },
+    { label: 'Stack', id: 'stack' },
+    { label: 'Contact', id: 'contact' },
+  ],
+}
