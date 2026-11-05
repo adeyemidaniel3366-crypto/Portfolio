@@ -1,8 +1,0 @@
-@import 'tailwindcss';
-
-:root { color: #0a0a0a; background: #fafafa; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-optical-sizing: auto; }
-* { box-sizing: border-box; }
-html { min-width: 320px; }
-body { min-width: 320px; }
-#root { width: 100%; min-height: 100svh; overflow-x: clip; }
-img, svg { max-width: 100%; }

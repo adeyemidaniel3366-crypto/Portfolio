@@ -1,4 +1,2 @@
 *.zip filter=lfs diff=lfs merge=lfs -text
-C:/Users/Administrator/Desktop/918/918.zip filter=lfs diff=lfs merge=lfs -text
-*.mov filter=lfs diff=lfs merge=lfs -text
-C:/Users/Administrator/Desktop/Portfolio filter=lfs diff=lfs merge=lfs -text
+C:/Users/Administrator/Desktop/Portfolio/918.zip filter=lfs diff=lfs merge=lfs -text
