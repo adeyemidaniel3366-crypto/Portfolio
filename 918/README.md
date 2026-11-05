@@ -4,7 +4,7 @@ A production-quality, fully responsive personal portfolio website built with mod
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 
 This portfolio showcases a software developer's work, skills, and experience through a bold, editorial-style design inspired by creative director portfolios. Every section is animated with scroll-triggered transitions, and all content is managed through a single data file.
 
@@ -12,7 +12,7 @@ This portfolio showcases a software developer's work, skills, and experience thr
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Category | Technology | Purpose |
 |----------|------------|---------|
@@ -35,7 +35,7 @@ This portfolio showcases a software developer's work, skills, and experience thr
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 918/
@@ -51,52 +51,32 @@ This portfolio showcases a software developer's work, skills, and experience thr
 │       └── material-fx.png
 ├── src/
 │   ├── components/
-│   │   ├── layout/              # Global layout components
-│   │   │   ├── Navbar.jsx       # Sticky nav, mobile menu, active section highlighting
-│   │   │   ├── Footer.jsx       # Footer with nav, services, contact, social
-│   │   │   ├── Preloader.jsx    # Loading screen with count-up animation
-│   │   │   ├── ScrollProgress.jsx  # Top progress bar
-│   │   │   ├── CustomCursor.jsx # Desktop-only magnetic cursor
-│   │   │   └── SmoothScroll.jsx # Lenis initialization
-│   │   ├── sections/            # Page sections (composed in App.jsx)
-│   │   │   ├── Hero.jsx         # Headline, portrait, availability label
-│   │   │   ├── About.jsx        # Bio, signature, stats, code window
-│   │   │   ├── Services.jsx     # 5-column service cards
-│   │   │   ├── Skills.jsx       # Animated skill bars + grouped chips
-│   │   │   ├── Work.jsx         # Filterable project grid + modal
-│   │   │   ├── TechStack.jsx    # Infinite marquee + foundations grid
-│   │   │   ├── HowIBuild.jsx    # 3 principle cards
-│   │   │   └── Contact.jsx      # CTA + contact modal
-│   │   └── ui/                  # Reusable UI primitives
-│   │       ├── Button.jsx       # Dark, light, outline variants
-│   │       ├── Label.jsx        # Section label with red bullet
-│   │       ├── Reveal.jsx       # Scroll-triggered fade-up
-│   │       ├── Counter.jsx      # Count-up number animation
-│   │       ├── SkillBar.jsx     # Animated progress bar
-│   │       ├── ProjectCard.jsx  # Project tile with hover reveal
-│   │       ├── ProjectModal.jsx # Shared-layout modal
-│   │       └── Marquee.jsx      # Infinite scrolling track
+│   │   └── AntigravityBackground.jsx  # Ambient animated background
 │   ├── data/
 │   │   └── content.js           # 🎯 SINGLE SOURCE OF TRUTH — all content here
-│   ├── hooks/
-│   │   ├── useActiveSection.js  # IntersectionObserver for nav highlighting
-│   │   ├── useMediaQuery.js     # Responsive breakpoints
-│   │   └── useReducedMotion.js  # prefers-reduced-motion wrapper
-│   ├── lib/
-│   │   └── motion.js            # Shared Framer Motion variants
-│   ├── styles/
-│   │   └── index.css            # Tailwind imports + global styles
-│   ├── App.jsx                  # Root component, composes all sections
+│   ├── App.jsx                  # Root component (all sections as inline components)
+│   ├── App.css                  # All custom styles (Tailwind + custom CSS)
+│   ├── index.css                # Tailwind import + global styles + design tokens
 │   └── main.jsx                 # Entry point
-├── index.html                   # SEO meta, Open Graph, favicon
+├── index.html                   # SEO meta, Open Graph, favicon, Google Fonts
 ├── vite.config.js               # Vite + Tailwind plugin config
 ├── package.json
-└── eslint.config.js
+├── eslint.config.js
+└── README.md
 ```
+
+### Architecture Note
+
+This portfolio uses a **single-file component architecture** where all sections (Hero, About, Services, Skills, Work, TechStack, HowIBuild, Contact) and layout components (Navbar, Footer, Preloader, ScrollProgress, CustomCursor, SmoothScroll) are defined as inline components within `App.jsx`. This approach:
+
+- Keeps the project simple with minimal file count
+- Enables easy customization without navigating multiple files
+- Maintains performance through code-splitting at the build level
+- Uses a content-driven pattern where all text/data lives in `src/data/content.js`
 
 ---
 
-## 🎨 Design System
+## Design System
 
 ### Colors (CSS Variables in `src/styles/index.css`)
 
@@ -129,7 +109,7 @@ This portfolio showcases a software developer's work, skills, and experience thr
 
 ---
 
-## ⚡ Animation Architecture
+##  Animation Architecture
 
 ### Scroll-Driven Animations (Framer Motion)
 
@@ -172,7 +152,7 @@ const reduceMotion = useReducedMotion()
 
 ---
 
-## 📝 Content Management
+##  Content Management
 
 **All content lives in `src/data/content.js`** — no hardcoded strings in components.
 
@@ -208,7 +188,7 @@ export const content = {
 
 ---
 
-## 🚀 Development Workflow
+##  Development Workflow
 
 ### Prerequisites
 
@@ -240,14 +220,17 @@ Vite's HMR preserves component state during edits. CSS changes apply instantly w
 
 ### Adding a New Section
 
-1. Create component in `src/components/sections/`
-2. Import and add to `App.jsx` in desired order
-3. Add `id` to section element for nav highlighting
+Since all sections are inline components in `App.jsx`:
+
+1. Create a new component function in `App.jsx` (follow existing patterns)
+2. Add the component to the `App` function's JSX in the desired order
+3. Add `id` to the section element for nav highlighting
 4. Add nav item to `content.nav` in `content.js`
+5. Add any new content fields to `content.js` as needed
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
 ### Vercel (Recommended)
 
@@ -273,24 +256,24 @@ The `dist/` folder contains static assets. Upload to any static host (GitHub Pag
 
 ---
 
-## 🎨 Customization Guide
+## Customization Guide
 
 ### Changing Colors
 
-Edit CSS variables in `src/styles/index.css`:
+Edit CSS variables in `src/index.css` (using Tailwind v4 `@theme` syntax):
 
 ```css
-:root {
-  --accent: #your-color;    /* Primary accent */
-  --ink: #your-dark;        /* Text color */
-  --paper: #your-bg;        /* Background */
+@theme {
+  --color-accent: #your-color;    /* Primary accent */
+  --color-ink: #your-dark;        /* Text color */
+  --color-paper: #your-bg;        /* Background */
 }
 ```
 
 ### Changing Fonts
 
-1. Update Google Fonts import in `src/styles/index.css`
-2. Update `--heading`, `--body`, `--mono`, `--serif` variables
+1. Update Google Fonts import in `index.html`
+2. Update `--font-display`, `--font-body`, `--font-signature`, `--font-mono` in `@theme` in `src/index.css`
 
 ### Adding a Project
 
@@ -302,13 +285,13 @@ Edit CSS variables in `src/styles/index.css`:
 
 ### Modifying Animations
 
-- **Global variants**: `src/lib/motion.js`
-- **Per-component**: Edit transition props in section components
+- **Global variants**: Edit `reveal` object in `App.jsx`
+- **Per-component**: Edit transition props in section components within `App.jsx`
 - **Reduced motion**: All components check `useReducedMotion()`
 
 ---
 
-## ♿ Accessibility
+## Accessibility
 
 - Semantic HTML5 (`header`, `nav`, `main`, `section`, `footer`)
 - Proper heading hierarchy (h1 → h2 → h3)
@@ -321,7 +304,7 @@ Edit CSS variables in `src/styles/index.css`:
 
 ---
 
-## 📦 Bundle Analysis
+## Bundle Analysis
 
 ```
 dist/assets/index-*.js   ~347 KB (112 KB gzipped)
@@ -337,7 +320,7 @@ Main contributors:
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Animations not triggering
 - Check `prefers-reduced-motion` in OS settings
@@ -351,18 +334,18 @@ Main contributors:
 
 ### Build fails
 - Run `npm run lint` to see errors
-- Check for missing imports or syntax errors
+- Check for missing imports or syntax errors in `App.jsx`
 - Clear `node_modules` and reinstall: `rm -rf node_modules package-lock.json && npm install`
 
 ---
 
-## 📄 License
+## License
 
 MIT License — feel free to use as a template for your own portfolio.
 
 ---
 
-## 🙏 Credits
+## Credits
 
 - **Design inspiration**: Creative director portfolio references
 - **Fonts**: Google Fonts (Anton, Inter, Caveat, DM Mono)
