@@ -8,7 +8,7 @@ A production-quality, fully responsive personal portfolio website built with mod
 
 This portfolio showcases a software developer's work, skills, and experience through a bold, editorial-style design inspired by creative director portfolios. Every section is animated with scroll-triggered transitions, and all content is managed through a single data file.
 
-**Live Demo:** [http://127.0.0.1:5173/](http://127.0.0.1:5173/) (local development)
+**Live @:** [https://storied-entremet-5e1300.netlify.app/] (local development)
 
 ---
 
