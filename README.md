@@ -53,7 +53,7 @@ This portfolio showcases a software developer's work, skills, and experience thr
 │   ├── components/
 │   │   └── AntigravityBackground.jsx  # Ambient animated background
 │   ├── data/
-│   │   └── content.js           # 🎯 SINGLE SOURCE OF TRUTH — all content here
+│   │   └── content.js           # SINGLE SOURCE OF TRUTH — all content here
 │   ├── App.jsx                  # Root component (all sections as inline components)
 │   ├── App.css                  # All custom styles (Tailwind + custom CSS)
 │   ├── index.css                # Tailwind import + global styles + design tokens
